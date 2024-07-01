@@ -43,7 +43,7 @@ get.marker.spillover <- function( scale.untransformed, flow.gate, flow.control,
     marker.spillover.zero <- rep( 0, flow.control$marker.n )
     names( marker.spillover.zero ) <- flow.control$marker
 
-    marker.spillover <- mclapply( flow.control$sample, function( samp )
+    marker.spillover <- lapply( flow.control$sample, function( samp )
     {
         marker.proper <- samp
 
@@ -104,8 +104,7 @@ get.marker.spillover <- function( scale.untransformed, flow.gate, flow.control,
             }
 
         c( marker.spillover.inte, marker.spillover.coef )
-    },
-    mc.cores = get.worker.process( asp$worker.process.n ) )
+    } )
 
     marker.spillover <- do.call( rbind, marker.spillover )
     rownames( marker.spillover ) <- flow.control$marker

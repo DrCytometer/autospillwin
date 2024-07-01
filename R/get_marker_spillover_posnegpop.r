@@ -35,7 +35,7 @@ get.marker.spillover.posnegpop <- function( flow.gate, flow.control, asp )
     marker.spillpopu.zero <- rep( 0, flow.control$marker.n )
     names( marker.spillpopu.zero ) <- flow.control$marker
 
-    marker.spillpopu <- mclapply( flow.control$sample, function( samp )
+    marker.spillpopu <- lapply( flow.control$sample, function( samp )
     {
         marker.proper <- samp
 
@@ -160,8 +160,7 @@ get.marker.spillover.posnegpop <- function( flow.gate, flow.control, asp )
             }
 
         marker.spillpopu.coef
-    },
-    mc.cores = get.worker.process( asp$worker.process.n ) )
+    } )
 
     marker.spillpopu <- do.call( rbind, marker.spillpopu )
     rownames( marker.spillpopu ) <- flow.control$marker
