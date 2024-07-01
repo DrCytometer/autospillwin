@@ -8,7 +8,7 @@
 # license. See the LICENSE file for details.
 
 
-# Returns a list of matrices discribing compensation error, with intercepts,
+# Returns a list of matrices describing compensation error, with intercepts,
 # coefficients, slopes, and skewness.
 
 get.compensation.error <- function( expr.data.unco, expr.data.comp,

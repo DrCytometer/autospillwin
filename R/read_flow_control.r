@@ -156,7 +156,8 @@ read.flow.control <- function( control.dir, control.def.file, asp )
     # read fcs files
 
     flow.set <- lapply( flow.file.name, function( ff )
-        read.FCS( file.path( control.dir, ff ), transformation = NULL ) )
+        read.FCS( file.path( control.dir, ff ), transformation = NULL,
+                  truncate_max_range = FALSE ) )
 
     # get range of fcs data
 

@@ -9,7 +9,7 @@
 
 
 # Returns two lists with transformation parameters per marker, for direct and
-# inverse tranformation.
+# inverse transformation.
 
 get.transformation <- function( flow.control, asp )
 {

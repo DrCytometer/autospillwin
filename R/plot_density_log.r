@@ -8,7 +8,7 @@
 # license. See the LICENSE file for details.
 
 
-# Plots density of log values segreggated by sign, ignoring diagonal
+# Plots density of log values segregated by sign, ignoring diagonal
 # coefficients and zeroes.
 
 plot.density.log <- function( x.data, x.label, plot.file.path, asp )

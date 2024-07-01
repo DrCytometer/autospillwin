@@ -24,7 +24,7 @@ get.autospill.param.minimal <- function()
 
         default.scatter.parameter = c( "FSC-A", "SSC-A" ),
 
-        antigen.autof = "AutoF",
+        antigen.autof = "AF",
 
         marker.forbidden.char = " !\"#$%&'()*,/:;?@[\\]^{|}~",
         marker.substitution.char = "-",

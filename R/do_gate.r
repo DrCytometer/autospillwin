@@ -340,7 +340,7 @@ do.gate <- function( gate.data, gate.param, samp, flow.control, asp )
             gate.population, flow.control, asp )
     }
 
-    # thresold data in region around target maximum
+    # threshold data in region around target maximum
 
     gate.region.max.density <- kde2d(
         gate.data[ gate.region.density.max.data.idx, 1 ],

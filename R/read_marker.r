@@ -53,7 +53,7 @@ read.marker <- function( control.dir, control.def.file, asp )
 
     flow.set.marker.all <- lapply( control$filename, function( cf )
         colnames( read.FCS( file.path( control.dir, cf ),
-            transformation = NULL ) ) )
+            transformation = NULL, truncate_max_range = FALSE ) ) )
 
     flow.set.marker <- flow.set.marker.all[[ 1 ]]
 
