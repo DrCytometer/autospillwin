@@ -1,6 +1,6 @@
-# autospill
+# autospill-win
 
-The **`autospill`** package implements the AutoSpill algorithm for calculating 
+The **`autospill-win`** package implements the AutoSpill algorithm for calculating 
 spillover coefficients, used to compensate or unmix flow cytometry data. 
 
 This fork will, when completed, be Windows-compatible. For Mac, Unix or cluster 
@@ -17,14 +17,14 @@ of multichromatic flow cytometry data
 
 ## Installation
 
-To install **`autospill`** from this GitHub repository, 
+To install **`autospill-win`** from this GitHub repository, 
 use the function `install_github` in the 
 [devtools](https://cran.r-project.org/package=devtools) package. 
 
 ```R
 library( devtools )
 
-install_github( "drcytometer/autospill" )
+install_github( "drcytometer/autospill-win" )
 ```
 
 
@@ -33,7 +33,7 @@ install_github( "drcytometer/autospill" )
 You can use the standard help in R.
 
 ```R
-library( autospill )
+library( autospill-win )
 
 ? get.marker.spillover
 ? refine.spillover
@@ -53,8 +53,4 @@ For this, you will need to download the datasets (FCS files and auxiliary
 [MM1 dataset](https://flowrepository.org/id/FR-FCM-Z2SS), 
 [HS1 & HS2 datasets](https://flowrepository.org/id/FR-FCM-Z2ST), and 
 [Be1 dataset](https://flowrepository.org/id/FR-FCM-Z2SV). 
-
-The scripts `calculate_compensation_website.r` and 
-`calculate_compensation_website.sh` can be used to reproduce the results 
-obtained at the [AutoSpill website](https://autospill.vib.be). 
 
