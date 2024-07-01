@@ -30,7 +30,7 @@
 #'
 #' @export
 
-gate.flow.data <- function( flow.control, asp )
+gate.flow.data.win <- function( flow.control, asp )
 {
   cl <- get.worker.process( asp$worker.process.n )
   
