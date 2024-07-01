@@ -42,8 +42,10 @@ library( autospill-win )
 
 ## Examples
 calculate_compensation_minimal.r
+
 Runs a calculation of compensation with autospill, without creating any
 figures or tables.
+
 Requires assigning proper values to the variables:
   control.dir    directory with the set of single-color controls
   control.def.file    csv file defining the names and channels of the
