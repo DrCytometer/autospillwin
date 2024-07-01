@@ -34,15 +34,14 @@ gate.flow.data <- function( flow.control, asp )
 {
     # gate events sample by sample
 
-    flow.gates <- mclapply( flow.control$sample, function( samp )
+    flow.gates <- lapply( flow.control$sample, function( samp )
         do.gate(
             flow.control$expr.data.untr[ flow.control$event.sample == samp,
                 flow.control$scatter.parameter ],
             flow.control$gate.parameter[[ flow.control$marker.original[
                 match( samp, flow.control$marker ) ] ]],
             samp, flow.control, asp
-        ),
-        mc.cores = get.worker.process( asp$worker.process.n )
+        )
     )
 
     names( flow.gates ) <- flow.control$sample
