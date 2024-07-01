@@ -3,6 +3,9 @@
 The **`autospill`** package implements the AutoSpill algorithm for calculating 
 spillover coefficients, used to compensate or unmix flow cytometry data. 
 
+This fork will, when completed, be Windows-compatible. For Mac, Unix or cluster 
+usage, we recommend the [original version](https://github.com/carlosproca/autospill?tab=readme-ov-file).
+
 For more details, please see:  
 Roca *et al*: AutoSpill is a principled framework that simplifies the analysis 
 of multichromatic flow cytometry data
