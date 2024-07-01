@@ -4,11 +4,12 @@ The **`autospill`** package implements the AutoSpill algorithm for calculating
 spillover coefficients, used to compensate or unmix flow cytometry data. 
 
 For more details, please see:  
-Roca *et al*: AutoSpill: A method for calculating spillover coefficients to 
-compensate or unmix high-parameter flow cytometry data. 
-*bioRxiv* 2020.06.29.177196; 
-[doi:10.1101/2020.06.29.177196](https://doi.org/10.1101/2020.06.29.177196) 
-\(2020\). 
+Roca *et al*: AutoSpill is a principled framework that simplifies the analysis 
+of multichromatic flow cytometry data
+*Nature Communications* 2021.05.17; 
+[doi:10.1038/s41467-021-23126-8](https://www.nature.com/articles/s41467-021-23126-8) 
+\(2021\). 
+
 
 
 ## Installation
@@ -20,7 +21,7 @@ use the function `install_github` in the
 ```R
 library( devtools )
 
-install_github( "carlosproca/autospill" )
+install_github( "drcytometer/autospill" )
 ```
 
 
