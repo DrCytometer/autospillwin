@@ -1,4 +1,4 @@
-Package: autospill-win
+Package: autospillwin
 Version: 0.3.0
 Date: 2024-07-01
 Title: AutoSpill: A method for calculating spillover coefficients to 
