@@ -10,6 +10,20 @@
 
 # Plots matrix coefficients, by rows or columns.
 
+#' @title Plot Matrix Coefficients
+#' @description This function plots matrix coefficients by rows or columns.
+#' @importFrom ggplot2 ggplot aes geom_point geom_hline scale_x_continuous 
+#' @importFrom ggplot2 sec_axis labs theme_bw theme element_line element_text 
+#' @importFrom ggplot2 element_rect margin ggsave
+#' @param the.matrix Matrix containing the coefficients to be plotted.
+#' @param by.rows Logical value indicating whether to plot by rows.
+#' @param figure.dir Character string representing the directory to save the plot.
+#' @param figure.file.label Character string representing the label for the figure file.
+#' @param flow.control List containing flow cytometry control parameters.
+#' @param asp List containing aesthetic parameters for the plot.
+#' @return A ggplot object representing the matrix plot.
+#' @export
+
 plot.matrix <- function( the.matrix, by.rows, figure.dir, figure.file.label,
     flow.control, asp )
 {

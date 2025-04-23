@@ -11,6 +11,24 @@
 # Returns a list of matrices describing compensation error, with intercepts,
 # coefficients, slopes, and skewness.
 
+
+#' @title Get Compensation Error
+#' @description This function returns a list of matrices describing compensation 
+#'     error, including intercepts, coefficients, slopes, and skewness.
+#' @importFrom moments skewness
+#' @param expr.data.unco Matrix of uncompensated expression data.
+#' @param expr.data.comp Matrix of compensated expression data.
+#' @param marker.spillover.unco List of matrices describing uncompensated spillover.
+#' @param scale.untransformed Logical value indicating whether to use untransformed scale.
+#' @param plot.figure Logical value indicating whether to plot figures.
+#' @param figure.label Character string representing the label for the figure file.
+#' @param flow.gate List containing flow gate parameters.
+#' @param flow.control List containing flow cytometry control parameters.
+#' @param asp List containing aesthetic parameters for the plot.
+#' @return A list of matrices describing compensation error, including intercepts, 
+#'     coefficients, slopes, and skewness.
+#' @export
+
 get.compensation.error <- function( expr.data.unco, expr.data.comp,
     marker.spillover.unco, scale.untransformed, plot.figure, figure.label,
     flow.gate, flow.control, asp )
@@ -18,7 +36,7 @@ get.compensation.error <- function( expr.data.unco, expr.data.comp,
     marker.spillover.zero <- rep( 0, flow.control$marker.n )
     names( marker.spillover.zero ) <- flow.control$marker
 
-    marker.spillover.comp <- mclapply( flow.control$sample, function( samp )
+    marker.spillover.comp <- lapply( flow.control$sample, function( samp )
     {
         marker.proper <- samp
 
@@ -191,8 +209,7 @@ get.compensation.error <- function( expr.data.unco, expr.data.comp,
 
         c( marker.spillover.comp.inte, marker.spillover.comp.coef,
             marker.spillover.comp.slop, marker.spillover.comp.skew )
-    },
-    mc.cores = get.worker.process( asp$worker.process.n ) ) # samp
+    } ) # samp
 
     marker.spillover.comp <- do.call( rbind, marker.spillover.comp )
     rownames( marker.spillover.comp ) <- flow.control$marker

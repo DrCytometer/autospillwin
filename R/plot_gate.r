@@ -10,6 +10,27 @@
 
 # Plots gate, including intermediate steps.
 
+
+#' @title Plot Gate
+#' @description This function generates and saves a plot representing the gate
+#'     for flow cytometry data.
+#' @importFrom ggplot2 ggplot aes scale_x_continuous scale_y_continuous 
+#' @importFrom ggplot2 geom_point scale_color_gradientn theme_bw theme 
+#' @importFrom ggplot2 element_line element_text element_rect margin expansion 
+#' @importFrom ggplot2 ggsave geom_segment
+#' @param gate.stage Integer indicating the stage of gating.
+#' @param samp Character string representing the sample identifier.
+#' @param gate.data Data frame containing the gating data.
+#' @param gate.marker Vector of markers used for gating.
+#' @param gate.bound Data frame containing the boundary data for gating.
+#' @param gate.region Data frame containing the region data for gating.
+#' @param gate.population Data frame containing the population data for gating.
+#' @param flow.control List containing flow cytometry control parameters.
+#' @param asp List containing aesthetic parameters for the plot.
+#' @return Save a PNG file.
+#' @export
+
+
 plot.gate <- function( gate.stage, samp, gate.data, gate.marker, gate.bound,
     gate.region, gate.population, flow.control, asp )
 {

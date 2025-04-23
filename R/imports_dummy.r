@@ -34,7 +34,7 @@
 #'
 #' @importFrom moments skewness
 #'
-#' @importFrom parallel detectCores mclapply parLapply
+#' @importFrom parallel detectCores
 #'
 #' @importFrom RColorBrewer brewer.pal
 #'

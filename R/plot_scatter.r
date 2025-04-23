@@ -11,6 +11,46 @@
 # Makes scatter plots of compensated and uncompensated data, with regression
 # and reference lines, and a label showing slope error.
 
+
+#' @title Plot Scatter of Compensated and Uncompensated Data
+#' @description This function creates scatter plots of compensated and 
+#'     uncompensated data, including regression and reference lines, and a label 
+#'     showing slope error.
+#' @importFrom ggplot2 ggplot aes geom_point geom_abline geom_vline annotate 
+#' @importFrom ggplot2 scale_x_continuous scale_y_continuous scale_color_manual 
+#' @importFrom ggplot2 theme_bw theme element_line element_text element_rect 
+#' @importFrom ggplot2 margin ggsave
+#' @param expr.data.unco.x Numeric vector of uncompensated data for the x-axis.
+#' @param expr.data.unco.y Numeric vector of uncompensated data for the y-axis.
+#' @param expr.data.comp.x Numeric vector of compensated data for the x-axis.
+#' @param expr.data.comp.y Numeric vector of compensated data for the y-axis.
+#' @param spillover.unco.inte Numeric value of the intercept for the uncompensated 
+#'     spillover.
+#' @param spillover.unco.coef Numeric value of the coefficient for the uncompensated 
+#'     spillover.
+#' @param spillover.comp.inte Numeric value of the intercept for the compensated 
+#'     spillover.
+#' @param spillover.comp.coef Numeric value of the coefficient for the 
+#'     compensated spillover.
+#' @param spillover.comp.slop Numeric value of the slope error for the 
+#'     compensated spillover.
+#' @param marker.limit.range Numeric vector defining the limits for the marker range.
+#' @param marker.proper.limit.range Numeric vector defining the limits for the 
+#'     proper marker range.
+#' @param samp Character string representing the sample identifier.
+#' @param marker Character string representing the marker.
+#' @param marker.proper Character string representing the proper marker.
+#' @param scale.untransformed Logical value indicating whether to use 
+#'     untransformed scale.
+#' @param figure.file.label Character string representing the label for the 
+#'     figure file.
+#' @param flow.gate List containing flow gate parameters.
+#' @param flow.control List containing flow cytometry control parameters.
+#' @param asp List containing aesthetic parameters for the plot.
+#' @return A ggplot object representing the scatter plot.
+#' @export
+
+
 plot.scatter <- function(
     expr.data.unco.x, expr.data.unco.y, expr.data.comp.x, expr.data.comp.y,
     spillover.unco.inte, spillover.unco.coef,
