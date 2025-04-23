@@ -3,7 +3,7 @@
 The **`autospillwin`** package implements the AutoSpill algorithm for calculating 
 spillover coefficients, used to compensate or unmix flow cytometry data. 
 
-This fork will, when completed, be Windows-compatible. For Mac, Unix or cluster 
+This fork is intended to be Windows-compatible. For Mac, Unix or cluster 
 usage, we recommend the [original version](https://github.com/carlosproca/autospill?tab=readme-ov-file).
 
 For more details, please see:  
@@ -24,7 +24,7 @@ use the function `install_github` in the
 ```R
 library( devtools )
 
-install_github( "drcytometer/autospillwin" )
+install_github( "DrCytometer/autospillwin" )
 ```
 
 
@@ -50,6 +50,10 @@ Requires assigning proper values to the variables:
   control.dir    directory with the set of single-color controls
   control.def.file    csv file defining the names and channels of the
   single-color controls
+
+The creation of the fcs_control_file is critical. See the example provided.
+You may also use the control_file_prep.r script to get started. Both are in the
+`examples` folder.
   
 ```
 library( autospillwin )
